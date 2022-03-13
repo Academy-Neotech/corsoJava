@@ -16,6 +16,7 @@ public class StartApplication {
 		Scanner scan=new Scanner(System.in);
 		System.out.print("Inserire il numero di elementi:");
 		int numeroElementi=scan.nextInt();
+		
 		for(int i=0;i<numeroElementi;i++) {
 			MattoncinoLego m=new MattoncinoLego();
 			m.setColore("Blu");
