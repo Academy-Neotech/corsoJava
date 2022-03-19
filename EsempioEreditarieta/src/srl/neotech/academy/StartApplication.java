@@ -7,8 +7,10 @@ public class StartApplication {
 
 
 	Mammifero l=new Leone();
-	l.mangia();
 	System.out.println(l.toString());
+	
+	Balena b=new Balena();
+	b.mangia();
 	}
 	
 	

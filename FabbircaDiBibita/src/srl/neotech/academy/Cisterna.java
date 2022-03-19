@@ -45,6 +45,9 @@ public class Cisterna {
 	}
 	
 	
+	/**
+	 *
+	 */
 	@Override
 	public String toString() {
 		return this.getTipologia()+"--"+this.getContent()+"--"+this.getEvapDay()+"--"+this.getThresold();

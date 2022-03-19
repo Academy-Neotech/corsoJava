@@ -35,7 +35,9 @@ public class StartApplication {
 			
 			int randomEvap = ThreadLocalRandom.current().nextInt(1, 5 + 1);
 			cisternaDaAggiungere.setEvapDay(randomEvap);
+			
 			cantina.getCisterne().add(cisternaDaAggiungere);
+			cantina.
 			System.out.print("sono all'iesimo giro:"+i+"  ");
 			System.out.println(cisternaDaAggiungere);
 		}	
