@@ -3,4 +3,8 @@
   <groupId>srl.neotech.academy</groupId>
   <artifactId>MVN_Lib</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+       <maven.compiler.source>1.16</maven.compiler.source>
+       <maven.compiler.target>1.16</maven.compiler.target>
+  </properties>
 </project>
