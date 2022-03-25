@@ -8,8 +8,18 @@ public class StartApplication {
 		// TODO Auto-generated method stub
 
 		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
 		Astronave xwing=new Astronave();
 		Scanner scan=new Scanner(System.in);
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		System.out.println("sto sul brach1!!!!");
+		
+		
 		System.out.print("Impostare la velocita iniziale:");
 		int velocitaIniziale=scan.nextInt();
 		String risultatoDelDecollo=xwing.decolla(velocitaIniziale);
