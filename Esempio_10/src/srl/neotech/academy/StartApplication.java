@@ -7,7 +7,7 @@ public class StartApplication {
 	static int a=0;
 	static double f=32.6;
 	static String s="01234556789";	
-	static byte v=127;
+	static byte v=128;
 		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
