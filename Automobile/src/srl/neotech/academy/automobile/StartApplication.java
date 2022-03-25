@@ -6,6 +6,7 @@ public class StartApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("sto sul branch !!!!");
 
 		Automobile fordCMax=new Automobile();
 		

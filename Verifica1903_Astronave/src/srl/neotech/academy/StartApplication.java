@@ -7,6 +7,7 @@ public class StartApplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		System.out.println("sto sul brach1!!!!");
 		Astronave xwing=new Astronave();
 		Scanner scan=new Scanner(System.in);
 		System.out.print("Impostare la velocita iniziale:");
