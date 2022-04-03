@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>srl.neotech</groupId>
   <artifactId>TestMaven</artifactId>
@@ -18,6 +18,14 @@
     <artifactId>wordnet-random-name</artifactId>
     <version>1.5</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.diogonunes/JColor -->
+<dependency>
+    <groupId>com.diogonunes</groupId>
+    <artifactId>JColor</artifactId>
+    <version>5.2.0</version>
+</dependency>
+
+
 
 </dependencies>
 
