@@ -11,4 +11,9 @@ public class ViewController {
 	public String test() {
 		return "test";
 	}
+	
+	@RequestMapping(value="/ajax", method = RequestMethod.GET)
+	public String ajax() {
+		return "ajax";
+	}
 }
