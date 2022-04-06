@@ -10,8 +10,9 @@
 		FL_ Federico
 		SP_ Simone
 		MP_ Mauro
+		EL_ Eros
 	 -->
-	<artifactId>WebAppTemplate</artifactId>
+	<artifactId>MN_WebApp01</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 
@@ -51,7 +52,6 @@
 				<filtering>true</filtering>
 				<excludes>
 					<exclude>**/conf.properties</exclude>
-					<exclude>application.properties</exclude>
 				</excludes>
 			</resource>
 		</resources>
