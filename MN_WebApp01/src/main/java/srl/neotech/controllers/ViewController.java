@@ -12,6 +12,12 @@ public class ViewController {
 		return "test_view";
 	}
 	
+	@RequestMapping(value="/hello", method = RequestMethod.GET)
+	public String hello() {
+		return "hello_view";
+	}
+	
+	
 	@RequestMapping(value="/ajax", method = RequestMethod.GET)
 	public String ajax() {
 		return "ajax_view";
