@@ -3,15 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="static/css/hello.css"/>
+<title>Registrazione OK</title>
 </head>
-
-<c:out value="${mioTesto}"></c:out>
 <body>
-<h1 class="mia_classe">Titolo Grosso</h1>
-<h2>Titolo Medio</h2>
+Registrazione Ok per l'utente: <c:out value="${utente}"></c:out>
 </body>
 </html>
