@@ -50,7 +50,6 @@
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">@</span>
   <form:input  id="username" path="username"  class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
-  </br>
   <form:input  id="password" path="password"  class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
 </div>
 <input type="submit" id="btn_submit" class="btn btn-primary" value="registrati"/>
