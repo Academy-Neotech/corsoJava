@@ -31,10 +31,10 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li id="elemento_da_nascondere"><a class="dropdown-item" href="#">Elemento1</a></li>
+            <li id="elemento02"><a class="dropdown-item" href="#">Elemento2</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Elemento3</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -44,15 +44,22 @@
     </div>
   </div>
 </nav>
-<!-- ---- -->
 
-<form:form id="form__submit" action="registrazione_dati" method="POST" modelAttribute="registrazione">
+
+
+<form:form id="form_submit" action="registrazione_dati" method="get" modelAttribute="registrazione">
 <div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">@</span>
+  <span class="input-group-text" id="basic-addon1"></span>
   <form:input  id="username" path="username"  class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
   <form:input  id="password" path="password"  class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
+  <form:input  id="password" path="password"  class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
+   <form:select path="sesso">
+       <form:option value="maschio" label="maschio"/>
+       <form:option value="femmina" label="femmina"/>
+       <form:option value="altro" label="altro"/>  
+   </form:select>
 </div>
-<input type="submit" id="btn_submit" class="btn btn-primary" value="registrati"/>
+ <button type="submit" id="bth-search" class="btn btn-primary btn-lg">Registrati</button>
 </form:form>
 
 
