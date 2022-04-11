@@ -6,6 +6,8 @@ public class Aereo {
 	private String id;
 	private String nome;
 	private Integer numPasseggeri;
+	private String url_immagine;
+	private Integer numStelline;
 	
 	public String getId() {
 		return id;
@@ -25,6 +27,21 @@ public class Aereo {
 	public void setNumPasseggeri(Integer numPasseggeri) {
 		this.numPasseggeri = numPasseggeri;
 	}
+	public String getUrl_immagine() {
+		return url_immagine;
+	}
+	public void setUrl_immagine(String url_immagine) {
+		this.url_immagine = url_immagine;
+	}
+	public Integer getNumStelline() {
+		return numStelline;
+	}
+	public void setNumStelline(Integer numStelline) {
+		this.numStelline = numStelline;
+	}
+	
+	
+	
 	
 	
 

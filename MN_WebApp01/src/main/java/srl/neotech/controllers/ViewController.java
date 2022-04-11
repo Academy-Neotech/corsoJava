@@ -1,11 +1,15 @@
 package srl.neotech.controllers;
 
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import srl.neotech.model.Aereo;
 import srl.neotech.requestresponse.ProvaGetRequest;
 import srl.neotech.requestresponse.RequestRegistrazione;
 
@@ -54,7 +58,30 @@ public class ViewController {
 	public String ricezioneDati(@ModelAttribute("mapping_dati") ProvaGetRequest dati_in_input, Model model) {
          System.out.println(dati_in_input.getUsername());
          System.out.println(dati_in_input.getEmail());
+         
+         ArrayList<Aereo> listaAerei=new ArrayList<Aereo>();
+         for(int i=0;i<10;i++) {
+        	 Aereo aereo=new Aereo();
+        	 aereo.setId("ID:"+i);
+        	 aereo.setNome("Boing 747");
+        	 aereo.setNumPasseggeri(ThreadLocalRandom.current().nextInt(1, 100 + 1));
+        	 aereo.setNumStelline(ThreadLocalRandom.current().nextInt(1, 4 + 1));
+        	 if(i==0) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/71y+8f0a7YL._AC_UL160_SR160,160_.jpg");
+        	 if(i==1) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/81pQTGSlaSL._AC_UL160_SR160,160_.jpg");
+        	 if(i==2) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/515QflVvi1L._AC_UL160_SR160,160_.jpg");
+        	 if(i==3) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/71A0emybJXL._AC_UL160_SR160,160_.jpg");
+        	 
+        	 
+        	 listaAerei.add(aereo);
+        	 
+        	 
+         }
+         
+         model.addAttribute("listaAerei",listaAerei);
          model.addAttribute("utente", dati_in_input.getUsername());
+         
+         
+         
          return "registrazione_ok_view";
 	}
 }
