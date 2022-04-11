@@ -1,6 +1,7 @@
 package srl.neotech.controllers;
 
 import java.util.ArrayList;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Controller;
@@ -62,7 +63,7 @@ public class ViewController {
          ArrayList<Aereo> listaAerei=new ArrayList<Aereo>();
          for(int i=0;i<10;i++) {
         	 Aereo aereo=new Aereo();
-        	 aereo.setId("ID:"+i);
+        	 aereo.setId(UUID.randomUUID().toString());
         	 aereo.setNome("Boing 747");
         	 aereo.setNumPasseggeri(ThreadLocalRandom.current().nextInt(1, 100 + 1));
         	 aereo.setNumStelline(ThreadLocalRandom.current().nextInt(1, 4 + 1));
@@ -70,13 +71,15 @@ public class ViewController {
         	 if(i==1) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/81pQTGSlaSL._AC_UL160_SR160,160_.jpg");
         	 if(i==2) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/515QflVvi1L._AC_UL160_SR160,160_.jpg");
         	 if(i==3) aereo.setUrl_immagine("https://images-eu.ssl-images-amazon.com/images/I/71A0emybJXL._AC_UL160_SR160,160_.jpg");
-        	 
-        	 
-        	 listaAerei.add(aereo);
-        	 
-        	 
+        	 listaAerei.add(aereo);	 
          }
          
+
+         
+         Aereo aereoDaCancellare=new Aereo();
+         aereoDaCancellare.setId("ID"+1);                        
+         listaAerei.remove(aereoDaCancellare);
+        		 
          model.addAttribute("listaAerei",listaAerei);
          model.addAttribute("utente", dati_in_input.getUsername());
          

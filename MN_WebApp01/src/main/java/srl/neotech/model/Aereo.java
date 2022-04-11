@@ -1,6 +1,6 @@
 package srl.neotech.model;
 
- 
+ //Bean
 public class Aereo {
 	
 	private String id;
@@ -40,8 +40,13 @@ public class Aereo {
 		this.numStelline = numStelline;
 	}
 	
-	
-	
+
+     public boolean equals(Aereo a) {
+         if (this.id==a.id) {
+             return true;
+         }
+      return false;   
+	 }
 	
 	
 
