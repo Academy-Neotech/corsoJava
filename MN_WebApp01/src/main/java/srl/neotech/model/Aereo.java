@@ -39,15 +39,5 @@ public class Aereo {
 	public void setNumStelline(Integer numStelline) {
 		this.numStelline = numStelline;
 	}
-	
-
-     public boolean equals(Aereo a) {
-         if (this.id==a.id) {
-             return true;
-         }
-      return false;   
-	 }
-	
-	
 
 }
