@@ -1,14 +1,14 @@
 $(document).ready(function () {
-
-    $("#search-form").submit(function (event) {
-        //stop submit the form, we will post it manually.
-        event.preventDefault();
-        fire_ajax_submit();
-    });
+	
+    $('#bth-search').click(function (event) {
+     // var data = $("#search-form").serializeFormJSON();
+     // console.log(data);  
+     fire_ajax("api/search", "qqqq");
+});
 
 });
 
-
+/*
 function fire_ajax_submit() {
 
     var search = {};
@@ -33,4 +33,4 @@ function fire_ajax_submit() {
                 + e.responseText + "&lt;/pre&gt;";
         }
    });
-}
+}*/
