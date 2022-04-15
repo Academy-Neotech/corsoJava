@@ -1,41 +1,38 @@
-//---- FUNZIONE DI ENCODING IN JSON
-(function ($) {
-    $.fn.serializeFormJSON = function () {
-
-        var o = {};
-        var a = this.serializeArray();
-        $.each(a, function () {
-            if (o[this.name]) {
-                if (!o[this.name].push) {
-                    o[this.name] = [o[this.name]];
-                }
-                o[this.name].push(this.value || '');
-            } else {
-                o[this.name] = this.value || '';
-            }
-        });
-        return o;
-    };
-})(jQuery);
-//---- FINE FUNZIONE DI ENCODING IN JSON
-
-
-
 //Chiama l'API e ritorna il JSON
-function fire_ajax(send_url, send_data) {
-var jsondata={"aereo":"123"};
-
+function fire_ajax_post(send_url, send_data) {
 var response_data;
-    $.ajax({
+
+  return $.ajax({
         type: "POST",
         contentType: "application/json",
         url: send_url,
-        data: jsondata,
+        data: JSON.stringify(send_data),
         dataType: 'json',
         cache: false,
+        async:false,
+       // 200
         success: function (data) {
             response_data=JSON.stringify(data);
-            console.log("SUCCESS :"+response_data);
+            return response_data;
+        },
+        error: function (e) {
+            console.log(e);
+        }
+    });
+}
+
+
+function fire_ajax_pathvar(send_url) {
+var response_data;
+  return $.ajax({
+        type: "GET",
+        contentType: "application/json",
+        url: send_url,
+        cache: false,
+        async:false,
+        success: function (data) {
+            response_data=JSON.stringify(data);
+            return response_data;
         },
         error: function (e) {
             console.log("ERROR : ", e);

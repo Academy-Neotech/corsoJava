@@ -5,19 +5,16 @@ import java.util.ArrayList;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.context.request.RequestAttributes;
 
 import srl.neotech.model.Aereo;
 import srl.neotech.model.SingleListaAerei;
 import srl.neotech.requestresponse.ListaAereiResponse;
 import srl.neotech.requestresponse.ProvaGetRequest;
-import srl.neotech.requestresponse.RequestEliminaAereo;
 import srl.neotech.requestresponse.RequestRegistrazione;
 
 @Controller
@@ -37,21 +34,6 @@ public class ViewController {
 		model.addAttribute("numeroAereiGenerati", SingleListaAerei.getInstance().getListaAerei().size());
 		return "genera-aerei";
 	}
-	
-	@RequestMapping(value="/elimina-aereo", method = RequestMethod.GET)
-	public String eliminaAereo(@ModelAttribute RequestEliminaAereo dati_in_input, Model model) {
-		String idDaEliminare=dati_in_input.getId();
-		System.out.println("devo eliminare il record"+idDaEliminare);
-		
-		SingleListaAerei.getInstance().getListaAerei().removeIf(aereo->aereo.getId().equals(idDaEliminare));
-		
-		//return lista
-		ListaAereiResponse response=new ListaAereiResponse();
-		response.setListaAereiRestituiti(SingleListaAerei.getInstance().getListaAerei());
-		model.addAttribute("responseAerei", response);
-		return "lista-aerei";
-	}
-	
 	
 	
 	@RequestMapping(value="/lista-aerei", method = RequestMethod.GET)
