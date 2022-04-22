@@ -1,8 +1,5 @@
 package srl.neotech.controllers;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
