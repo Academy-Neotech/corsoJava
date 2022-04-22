@@ -14,7 +14,10 @@ public class ViewController {
 	//Rotta per Home.jsp
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String home() {
-		logger.info("Qualcuno è entrato sulla Home!");
+		logger.info("Ciao Giovanni e Patrizio, qualcuno è entrato sulla Home!");
+		logger.error("Questo è un errore !!!");
+		logger.debug("Stampo tutte le Reuqest e Response del mio metodo");
+		logger.trace("Questo è un trace");
 		return "home";
 	}
 	
